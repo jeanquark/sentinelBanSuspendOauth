@@ -203,9 +203,9 @@ class Sentinel
             //dd($confirmation_code);
 
             Mail::send('emails.registration', ['confirmation_code' => $confirmation_code], function ($m) use ($user) {
-                $m->from('yourname@yoursite.com', 'YOUR_SITE');
+                $m->from('yourname@yoursite.com', 'eurostadium.net');
 
-                $m->to($user->email, $user->first_name)->subject('YOUR_SITE verification mail');
+                $m->to($user->email, $user->first_name)->subject('eurostadium.net verification mail');
             });
         } else { // OAuth Registration
             //dd($user);
