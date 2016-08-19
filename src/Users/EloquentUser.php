@@ -48,6 +48,11 @@ class EloquentUser extends Model implements RoleableInterface, PermissibleInterf
         'google_id',
         'avatar',
         'permissions',
+        'nationality',
+        'flag',
+        'supported_club1',
+        'supported_club2',
+        'supported_club3',
     ];
 
     /**
