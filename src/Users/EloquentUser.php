@@ -203,7 +203,9 @@ class EloquentUser extends Model implements RoleableInterface, PermissibleInterf
      */
     public function inRole($role)
     {
-        $role = array_first($this->roles, function ($index, $instance) use ($role) {
+        // Change from Laravel 5.2 -> Laravel 5.3
+        //$role = array_first($this->roles, function ($index, $instance) use ($role) {
+        $role = array_first($this->roles, function ($instance, $index) use ($role) {
             if ($role instanceof RoleInterface) {
                 return ($instance->getRoleId() === $role->getRoleId());
             }
