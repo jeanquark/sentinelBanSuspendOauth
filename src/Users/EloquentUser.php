@@ -42,6 +42,7 @@ class EloquentUser extends Model implements RoleableInterface, PermissibleInterf
     protected $fillable = [
         'email',
         'password',
+        'username',
         'last_name',
         'first_name',
         'github_id',
