@@ -226,7 +226,7 @@ class Sentinel
      */
     public function registerAndActivate(array $credentials)
     {
-        return $this->register($credentials, true);
+        return $this->register($credentials, false);
     }
 
     /**
